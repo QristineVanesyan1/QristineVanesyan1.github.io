@@ -1,168 +1,23 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Purrday — Mood diary for cat people</title>
-<meta name="description" content="Pick a cat that matches your mood, jot a few words and watch your month fill up with tiny faces.">
-<link rel="icon" href="img/purrday_logo.png">
-<link rel="stylesheet" href="style.css">
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Purrday is a mood diary for cat people. Pick a cat that matches your mood, jot a few words and watch your month fill up with tiny faces.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1C1B18">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Purrday">
+  <meta property="og:title" content="Purrday · Mood diary for cat people">
+  <meta property="og:description" content="Every day, one little cat.">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="manifest" href="manifest.json">
+  <title>Purrday · Mood diary for cat people</title>
+  <style>html,body{margin:0;background:#1C1B18}</style>
 </head>
 <body>
-
-<header class="nav">
-  <div class="wrap nav-in">
-    <a class="brand" href="#top"><img src="img/purrday_logo.png" alt="">Purrday</a>
-    <nav class="links" aria-label="Main">
-      <a class="active" href="#top">Home</a><a href="#features">Features</a><a href="#cats">Cats</a><a href="#plus">Plus</a><a href="#faq">FAQ</a>
-    </nav>
-    <div class="nav-r">
-      <span class="lang">English ⌄</span>
-      <a class="btn btn-sm" href="#download">Download</a>
-    </div>
-  </div>
-</header>
-
-<main id="top">
-<section class="hero wrap">
-  <div class="hero-copy">
-    <p class="eyebrow">Mood diary for cat people</p>
-    <h1>Every day, one little cat.</h1>
-    <p class="lead">Pick a cat that matches your mood, jot a few words and watch your month fill up with tiny faces.</p>
-    <div class="stores">
-      <a class="store" href="#"><small>Download on the</small><b>App Store</b></a>
-      <a class="store" href="#"><small>Get it on</small><b>Google Play</b></a>
-    </div>
-    <p class="fine">Free on iOS and Android · Purrday Plus free for 7 days</p>
-  </div>
-
-  <div class="hero-art" aria-hidden="true">
-    <div class="blob"></div>
-    <div class="phone p1">
-      <div class="ph-head"><img src="img/purrday_logo.png" alt=""><b>Purrday</b></div>
-      <div class="ph-month">‹ <b>October 2026</b> ›</div>
-      <div class="cal" id="cal"></div>
-      <div class="ph-entry"><img src="img/calm.png" alt=""><div><b>Oct 6</b><small>Tuesday · Grumpy</small></div></div>
-    </div>
-    <div class="phone p2">
-      <b class="rep">Report</b><small>October 2026</small>
-      <div class="ph-card"><img src="img/calm.png" alt=""><div><small>Mostly</small><b>Calm</b></div></div>
-      <small class="mix">Mood mix</small>
-      <div class="bars">
-        <p>Joyful<i style="--w:70%"></i></p><p>Calm<i style="--w:90%"></i></p><p>Meh<i style="--w:35%"></i></p><p>Sad<i style="--w:20%"></i></p><p>Grumpy<i style="--w:15%"></i></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="center wrap simple">
-  <p class="eyebrow">Simple on purpose</p>
-  <h2>The simplest way to remember your day</h2>
-  <p class="sub">Meet Purrday, where you record your day with one cat and a few words. Making journaling a habit has never been easier.</p>
-  <ul class="moods">
-    <li><img src="img/joyful.png" alt="">Joyful</li>
-    <li><img src="img/calm.png" alt="">Calm</li>
-    <li><img src="img/meh.png" alt="">Meh</li>
-    <li><img src="img/sad.png" alt="">Sad</li>
-    <li><img src="img/grumpy.png" alt="">Grumpy</li>
-  </ul>
-</section>
-
-<section id="features" class="center wrap">
-  <p class="eyebrow">Features</p>
-  <h2>Small taps, big picture</h2>
-  <p class="sub">Everything you need to keep a diary you actually keep.</p>
-  <div class="grid3">
-    <article class="card"><div class="demo faces"><img src="img/joyful.png" alt=""><img src="img/calm.png" alt=""><img src="img/meh.png" alt=""><img src="img/sad.png" alt=""><img src="img/grumpy.png" alt=""></div><h3>Record in seconds</h3><p>Pick a cat, jot a few words. Your day is logged in a few taps.</p></article>
-    <article class="card"><div class="demo chips"><span>Weather</span><span>Reading</span><span>Walking</span><span class="on">Calm</span><span>Coffee</span><span>+ Add</span></div><h3>Fully customizable</h3><p>Edit the blocks and icons to fit your lifestyle.</p></article>
-    <article class="card"><div class="demo packs"><img src="img/joyful.png" alt=""><img src="img/sad.png" alt=""><img src="img/calm.png" alt=""></div><h3>Decorate with cat packs</h3><p>Swap in cats that fit your vibe and make the calendar yours.</p></article>
-    <article class="card"><div class="demo bars"><p>Calm<i style="--w:90%"></i></p><p>Joyful<i style="--w:45%"></i></p><p>Grumpy<i style="--w:30%"></i></p></div><h3>Track your mood shifts</h3><p>See how your mood is shaped by parts of your day.</p></article>
-    <article class="card"><div class="demo dots" id="dots"></div><h3>Find your patterns</h3><p>Personal reports reveal the rhythm of your weeks and months.</p></article>
-    <article class="card"><div class="demo note"><div><small>TUESDAY, OCTOBER 6</small><b>A quiet moment is still a moment.</b></div></div><h3>A little paw every day</h3><p>A small, kind note is waiting for you each morning.</p></article>
-  </div>
-</section>
-
-<section id="cats" class="center wrap">
-  <p class="eyebrow">Cat packs</p>
-  <h2>Pick a cat pack for every mood</h2>
-  <p class="sub">Decorate your calendar with cats that fit your vibe.</p>
-  <div class="grid4">
-    <article class="pack" style="--bg:#3a3322"><div class="pk-img"><img src="img/joyful.png" alt=""></div><div class="pk-row"><b>Cozy Cats</b><span class="tag free">Free</span></div><small>5 cats</small></article>
-    <article class="pack" style="--bg:#26324a"><div class="pk-img"><img src="img/sad.png" alt=""></div><div class="pk-row"><b>Space Cats</b><span class="tag">$1.99</span></div><small>5 cats</small></article>
-    <article class="pack" style="--bg:#3d2a28"><div class="pk-img"><img src="img/meh.png" alt=""></div><div class="pk-row"><b>Sushi Cats</b><span class="tag">$1.99</span></div><small>5 cats</small></article>
-    <article class="pack" style="--bg:#26352c"><div class="pk-img"><img src="img/calm.png" alt=""></div><div class="pk-row"><b>Winter Cats</b><span class="tag">$1.99</span></div><small>5 cats</small></article>
-  </div>
-</section>
-
-<section id="plus" class="center wrap">
-  <p class="crown">♛</p>
-  <p class="eyebrow">Purrday Plus</p>
-  <h2>Choose the plan that fits you best</h2>
-  <p class="sub">Completely free for 7 days. Cancel anytime.</p>
-  <div class="plans">
-    <article class="plan">
-      <h3>Free</h3><p class="price">$0<small> forever</small></p><p class="note">Everything you need to start</p>
-      <ul><li>Custom blocks<i>✓</i></li><li>Basic analysis<i>✓</i></li><li>In-depth analysis</li><li>Ad-free</li><li>Photos per day<i>1</i></li><li>Device sync</li><li>Cat packs<i>1 free pack</i></li></ul>
-      <a class="btn btn-ghost" href="#download">Get Purrday</a>
-    </article>
-    <article class="plan pop">
-      <span class="badge">POPULAR</span>
-      <h3>Purrday Plus</h3><p class="price">$39.99<small> /year · <s>$59.88</s></small></p><p class="note">Save 33% · or $4.99/month · 7 days free</p>
-      <ul><li>Custom blocks<i>✓</i></li><li>Basic analysis<i>✓</i></li><li>In-depth analysis<i>✓</i></li><li>Ad-free<i>✓</i></li><li>Photos per day<i>3</i></li><li>Device sync<i>All devices</i></li><li>Cat packs<i>All packs</i></li></ul>
-      <a class="btn" href="#download">Begin free trial</a>
-    </article>
-  </div>
-</section>
-
-<section class="center wrap">
-  <p class="eyebrow">A peek inside</p>
-  <h2>Little entries, big picture</h2>
-  <p class="sub">Sample entries from a Purrday calendar.</p>
-  <div class="grid3 entries">
-    <article class="entry"><header><img src="img/joyful.png" alt=""><div><b>Oct 1</b><small>Joyful</small></div></header><p>Cat café with friends. Best latte of the year.</p><div class="tags"><span>Friends</span><span>Café</span></div></article>
-    <article class="entry"><header><img src="img/calm.png" alt=""><div><b>Oct 5</b><small>Calm</small></div></header><p>A long walk and a quiet evening with a book.</p><div class="tags"><span>Walking</span><span>Reading</span></div></article>
-    <article class="entry"><header><img src="img/grumpy.png" alt=""><div><b>Oct 6</b><small>Grumpy</small></div></header><p>Back-to-back meetings. Not my day.</p><div class="tags"><span>Work</span></div></article>
-  </div>
-</section>
-
-<section id="faq" class="center wrap faq">
-  <p class="eyebrow">FAQ</p>
-  <h2>Good to know</h2>
-  <details><summary>Is Purrday free?</summary><p>Yes. The core diary is free forever. Purrday Plus adds in-depth analysis, device sync and every cat pack, with a 7-day free trial.</p></details>
-  <details><summary>Does it work offline?</summary><p>Entries are saved on your device first, so you can journal anywhere.</p></details>
-  <details><summary>Can I cancel Plus anytime?</summary><p>Of course. Cancel from your App Store or Google Play subscriptions.</p></details>
-</section>
-
-<section id="download" class="wrap cta">
-  <div>
-    <p class="eyebrow">Get Purrday</p>
-    <h2>Start journaling today!</h2>
-    <p class="sub">Download free on iOS and Android.</p>
-    <div class="stores">
-      <a class="store" href="#"><small>Download on the</small><b>App Store</b></a>
-      <a class="store" href="#"><small>Get it on</small><b>Google Play</b></a>
-    </div>
-  </div>
-  <div class="cta-art"><div class="blob2"></div><img src="img/onboarding_3.png" alt="A calm cat meditating"></div>
-</section>
-</main>
-
-<footer class="foot">
-  <div class="wrap foot-in">
-    <div><a class="brand" href="#top"><img src="img/purrday_logo.png" alt="">Purrday</a><p>Mood diary for cat people.<br>Every day counts.</p></div>
-    <div><h4>Explore</h4><a href="#top">Home</a><a href="#faq">FAQ</a><a href="#">Blog</a></div>
-    <div><h4>Legal</h4><a href="#">Terms of Use</a><a href="#">Privacy Policy</a></div>
-    <div><h4>Contact us</h4><a href="mailto:hello@purrday.app">hello@purrday.app</a><a href="#">Instagram · YouTube · Pinterest</a></div>
-  </div>
-  <p class="wrap copy">© 2026 Purrday. All rights reserved.</p>
-</footer>
-
-<script>
-const cols=['#e9d9a0','#cfe0b0','#d8d8d0','#a9bde0','#d9b79a'];
-const cal=document.getElementById('cal');
-for(let i=0;i<35;i++){const d=document.createElement('i');if(i>2&&i<10)d.style.background=cols[i%5];cal.appendChild(d)}
-const dots=document.getElementById('dots');
-for(let i=0;i<40;i++){const d=document.createElement('i');d.style.background=cols[(i*7+i%3)%5];dots.appendChild(d)}
-</script>
+  <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
